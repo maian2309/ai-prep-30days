@@ -9,4 +9,5 @@ def xin_chao(tên):
     else:
         print(f"Xin chào, {tên}!")
 
-main()
+if __name__ == "__main__":
+    main()

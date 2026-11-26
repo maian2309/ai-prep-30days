@@ -19,6 +19,9 @@ def main():
     while attempts < max_attempts:
         try:
             guess = int(input("Nhập số bạn đoán (1-100): "))
+            if not 1 <= guess <= 100:
+                print("Chỉ đoán từ 1 đến 100.")
+                continue
             attempts += 1
 
             if guess < secret_number:
@@ -32,6 +35,6 @@ def main():
             print("Vui lòng nhập một số hợp lệ.")
 
     print(f"Game over! Số cần đoán là {secret_number}. Bạn đã đoán {attempts} lần.")
-    
+
 if __name__ == "__main__":
     main()

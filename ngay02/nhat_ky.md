@@ -11,7 +11,3 @@
   2. `for` dùng khi biết trước số lần lặp hoặc duyệt một dãy (`range`, list, dict); `while` dùng khi chỉ biết điều kiện dừng. Mẫu `while True` + `break`/`return` dùng để bắt nhập lại đến khi hợp lệ (`cat.py`).
   3. Dùng `try` / `except ValueError` để chương trình không bị crash khi người dùng nhập chữ thay vì số (`doan_so.py`). Tách code thành các hàm nhỏ và đặt `main()` trong `if __name__ == "__main__":`.
 - 1 điều còn chưa chắc: khi nào nên dùng list, dict, hay list chứa dict (`hogwarts.py`), và cách duyệt từng loại cho gọn.
-
-## Ghi chú cần sửa
-- `doan_so.py`: khi hết lượt mới in số cần đoán, **chưa in số lần đã đoán** như đề yêu cầu. Số ngoài khoảng 1–100 vẫn bị tính một lượt.
-- `dieu_kien.py`: vòng `while True` trong `xep_loai` không cần thiết (hàm đã `return` ngay). Các dòng `pass` sau `return` có thể xoá.

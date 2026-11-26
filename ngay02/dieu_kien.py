@@ -5,6 +5,9 @@ Không dùng AI để viết code. Được hỏi AI giải thích khái niệm 
 """
 
 
+from unittest import result
+
+
 def xep_loai(diem: float) -> str:
     """Bài 1 (15đ).
 
@@ -36,11 +39,7 @@ def la_nam_nhuan(nam: int) -> bool:
     Năm nhuận: chia hết cho 4 và không chia hết cho 100, hoặc chia hết cho 400.
     1900 -> False, 2000 -> True, 2024 -> True
     """
-    if (nam % 4 == 0 and nam % 100 != 0) or (nam % 400 == 0):
-        return True
-    else:
-        return False
-
+    return (nam % 4 == 0 and nam % 100 != 0) or nam % 400 == 0
 
 def fizzbuzz(n: int) -> list[str]:
     """Bài 3 (10đ).
@@ -49,17 +48,17 @@ def fizzbuzz(n: int) -> list[str]:
     bội của cả hai là "FizzBuzz", còn lại là số dạng chuỗi.
     fizzbuzz(5) == ["1", "2", "Fizz", "4", "Buzz"]
     """
-    result = []
+    ket_qua = []
     for i in range(1, n + 1):
         if i % 3 == 0 and i % 5 == 0:
-            result.append("FizzBuzz")
+            ket_qua.append("FizzBuzz")
         elif i % 3 == 0:
-            result.append("Fizz")
+            ket_qua.append("Fizz")
         elif i % 5 == 0:
-            result.append("Buzz")
+            ket_qua.append("Buzz")
         else:
-            result.append(str(i))
-    return result
+            ket_qua.append(str(i))
+    return ket_qua
 
 
 def tam_giac(n: int) -> str:
@@ -72,14 +71,14 @@ def tam_giac(n: int) -> str:
     if n <= 0:
             return ""
     else:
-        result = ""
+        ket_qua = ""
         for i in range(1, n + 1):
-            spaces = " " * (n - i)
-            hashes = "#" * i
-            result += spaces + hashes
+            khoang_trang = " " * (n - i)
+            dau_thang = "#" * i
+            ket_qua += khoang_trang + dau_thang
             if i < n:
-                result += "\n"
-        return result
+                ket_qua += "\n"
+    return ket_qua
 
 
 def main():

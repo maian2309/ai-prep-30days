@@ -4,10 +4,6 @@ Tự chạy thử: python dieu_kien.py
 Không dùng AI để viết code. Được hỏi AI giải thích khái niệm hoặc thông báo lỗi.
 """
 
-
-from unittest import result
-
-
 def xep_loai(diem: float) -> str:
     """Bài 1 (15đ).
 
@@ -69,7 +65,7 @@ def tam_giac(n: int) -> str:
     tam_giac(3) == "  #\\n ##\\n###"
     """
     if n <= 0:
-            return ""
+        return ""
     else:
         ket_qua = ""
         for i in range(1, n + 1):

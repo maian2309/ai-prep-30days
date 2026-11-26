@@ -28,7 +28,6 @@ def xep_loai(diem: float) -> str:
         return "Yếu"
 
 
-
 def la_nam_nhuan(nam: int) -> bool:
     """Bài 2 (10đ).
 

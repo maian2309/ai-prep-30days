@@ -1,8 +1,8 @@
 def c_sang_f(c: float) -> float:
     return round(c * 9 / 5 + 32, 1)
 
-def bmi(can_nang_kg: float, chieu_cao_m: float) -> float:
-    return round(can_nang_kg / (chieu_cao_m ** 2), 1)
+def bmi(can_nang: float, chieu_cao: float) -> float:
+    return round(can_nang / (chieu_cao ** 2), 1)
 
 def main():
     print("Chuyển đổi nhiệt độ từ độ C sang độ F")

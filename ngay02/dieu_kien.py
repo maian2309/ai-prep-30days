@@ -15,8 +15,19 @@ def xep_loai(diem: float) -> str:
     < 5    -> "Yếu"
     Ngoài đoạn [0, 10] -> "Không hợp lệ"
     """
-    # Viết code của bạn ở đây
-    pass
+    if diem < 0 or diem > 10:
+        return "Không hợp lệ"
+    elif diem >= 9:
+        return "Xuất sắc"
+    elif diem >= 8:
+        return "Giỏi"
+    elif diem >= 6.5:
+        return "Khá"
+    elif diem >= 5:
+        return "Trung bình"
+    else:
+        return "Yếu"
+
 
 
 def la_nam_nhuan(nam: int) -> bool:
@@ -25,8 +36,10 @@ def la_nam_nhuan(nam: int) -> bool:
     Năm nhuận: chia hết cho 4 và không chia hết cho 100, hoặc chia hết cho 400.
     1900 -> False, 2000 -> True, 2024 -> True
     """
-    # Viết code của bạn ở đây
-    pass
+    if (nam % 4 == 0 and nam % 100 != 0) or (nam % 400 == 0):
+        return True
+    else:
+        return False
 
 
 def fizzbuzz(n: int) -> list[str]:
@@ -36,8 +49,17 @@ def fizzbuzz(n: int) -> list[str]:
     bội của cả hai là "FizzBuzz", còn lại là số dạng chuỗi.
     fizzbuzz(5) == ["1", "2", "Fizz", "4", "Buzz"]
     """
-    # Viết code của bạn ở đây
-    pass
+    result = []
+    for i in range(1, n + 1):
+        if i % 3 == 0 and i % 5 == 0:
+            result.append("FizzBuzz")
+        elif i % 3 == 0:
+            result.append("Fizz")
+        elif i % 5 == 0:
+            result.append("Buzz")
+        else:
+            result.append(str(i))
+    return result
 
 
 def tam_giac(n: int) -> str:
@@ -47,15 +69,25 @@ def tam_giac(n: int) -> str:
     không có "\\n" ở cuối.
     tam_giac(3) == "  #\\n ##\\n###"
     """
-    # Viết code của bạn ở đây
-    pass
+    if n <= 0:
+            return ""
+    else:
+        result = ""
+        for i in range(1, n + 1):
+            spaces = " " * (n - i)
+            hashes = "#" * i
+            result += spaces + hashes
+            if i < n:
+                result += "\n"
+        return result
 
 
 def main():
     # Tự gọi thử các hàm ở đây, ví dụ:
-    # print(xep_loai(8.5))
-    # print(tam_giac(3))
-    pass
+    print(xep_loai(8.5))
+    print(la_nam_nhuan(2024))
+    print(fizzbuzz(15))
+    print(tam_giac(3))
 
 
 if __name__ == "__main__":

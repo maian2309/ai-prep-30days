@@ -22,18 +22,18 @@ def main():
         print("4. Tìm")
         print("5. Liệt kê")
         print("0. Thoát")
-        choice = int(input("Chọn số: "))
-        if choice == 1:
+        lua_chon = input("Chọn số: ").strip()
+        if lua_chon == "1":
             them(danh_ba)
-        elif choice == 2:
+        elif lua_chon == "2":
             sua(danh_ba)
-        elif choice == 3:
+        elif lua_chon == "3":
             xoa(danh_ba)
-        elif choice == 4:
+        elif lua_chon == "4":
             tim(danh_ba)
-        elif choice == 5:
+        elif lua_chon == "5":
             liet_ke(danh_ba)
-        elif choice == 0:
+        elif lua_chon == "0":
             print("Thoát chương trình.")
             break
         else:
@@ -67,22 +67,23 @@ def xoa(danh_ba: dict):
 
 def tim(danh_ba: dict):
     """Tìm kiếm tên trong danh bạ."""
-    ten = input("Nhập tên cần tìm: ")
-    found = []
-    for name, phone in danh_ba.items():
-        if ten.lower() in name.lower():
-            found.append((name, phone))
-    if found:
-        for name, phone in found:
-            print(f"{name}: {phone}")
+    tu_khoa = input("Nhập tên cần tìm: ")
+    tim_thay = []
+    for ten, so in danh_ba.items():
+        if tu_khoa.lower() in ten.lower():
+            tim_thay.append((ten, so))
+    if tim_thay:
+        for ten, so in tim_thay:
+            print(f"{ten}: {so}")
     else:
-        print(f"Không tìm thấy tên chứa '{ten}'.")
+        print(f"Không tìm thấy tên chứa '{tu_khoa}'.")
+
 
 def liet_ke(danh_ba: dict):
     """Liệt kê tất cả các mục trong danh bạ."""
     if danh_ba:
-        for name, phone in danh_ba.items():
-            print(f"{name}: {phone}")
+        for ten, so in danh_ba.items():
+            print(f"{ten}: {so}")
     else:
         print("Danh bạ trống.")
 

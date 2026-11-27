@@ -22,10 +22,10 @@ def dem_tu(van_ban: str) -> dict[str, int]:
         for char in ".,!?;:":
             van_ban = van_ban.replace(char, "")
         # Chuyển về chữ thường và tách từ
-        tu_list = van_ban.lower().split()
+        danh_sach_tu = van_ban.lower().split()
         # Đếm số lần xuất hiện của mỗi từ
         dem = {}
-        for tu in tu_list:
+        for tu in danh_sach_tu:
             if tu in dem:
                 dem[tu] += 1
             else:

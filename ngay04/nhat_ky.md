@@ -1,7 +1,7 @@
 # Nhật ký Ngày 4
 
 - Khởi động (5 câu Ngày 3, không nhìn bài): đúng 5/5 câu. Câu quên:
-- Thời gian học thực tế: khoảng 3 giờ (13:30 – 16:35, thứ Bảy 28/11/2026)
+- Thời gian học thực tế: khoảng 3 giờ 15 phút
 - 3 điều học được:
   1. Dùng `try / except` để bắt đúng loại lỗi (`ValueError`, `TypeError`), kết hợp vòng lặp `while True` để hỏi lại người dùng cho tới khi nhập đúng; chủ động `raise` lỗi khi tham số không hợp lệ.
   2. Tách code thành module: đặt hàm vào `tien_ich.py`, dùng `from tien_ich import ...` trong `main.py`, và dùng `if __name__ == "__main__":` để file không tự chạy khi bị import.
